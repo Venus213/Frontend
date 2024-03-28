@@ -44,7 +44,7 @@ export const Signup = () => {
             }}
             onSubmit={async (values ,{resetForm}) => {
               axios
-                .post("http://localhost:3000/signup/signup", values)
+                .post("https://backend-rust-eta.vercel.app/signup/signup", values)
                 .then((res) => {
                   console.log(res);
                   resetForm()
@@ -102,7 +102,7 @@ export const Signup = () => {
             }}
             onSubmit={async (values) => {
               axios
-                .post("http://localhost:3000/signup/login", values)
+                .post("https://backend-rust-eta.vercel.app/signup/login", values)
                 .then((res) => {
                   // console.log();
                   sessionStorage.setItem("emptoken" , res.data.token )
