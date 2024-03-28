@@ -31,7 +31,7 @@ export const Single = () => {
   console.log(getdata);
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/blog/findbyid?id=${params.id}`)
+      .get(`https://backend-rust-eta.vercel.app/blog/findbyid?id=${params.id}`)
       .then((res) => {
         // console.log(res);
         setdata(res.data.data[0]);

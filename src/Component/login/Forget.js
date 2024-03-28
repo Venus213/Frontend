@@ -41,7 +41,7 @@ const Forget = () => {
           onSubmit={async (values) => {
             console.log(values);
             axios
-              .post("http://localhost:3000/signup/forgetpass", values)
+              .post("https://backend-rust-eta.vercel.app/signup/forgetpass", values)
               .then((res) => {
                 console.log(res);
                 setempid(res.data.data[0]._id);
@@ -91,7 +91,7 @@ const Forget = () => {
           onSubmit={async (values) => {
             console.log(values);
             axios
-              .put(`http://localhost:3000/signup/update/${getempid}`, values)
+              .put(`https://backend-rust-eta.vercel.app/signup/update/${getempid}`, values)
               .then((res) => {
                 console.log(res);
                 history.push("/signup");

@@ -89,7 +89,7 @@ export const Appointment = () => {
                         console.log(values);
                         axios
                           .post(
-                            "http://localhost:3000/appoinment/create",
+                            "https://backend-rust-eta.vercel.app/appoinment/create",
                             values
                           )
                           .then((res) => {

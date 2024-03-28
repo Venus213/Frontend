@@ -47,7 +47,7 @@ export const Profile = () => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:3000/signup/findbyid?id=${sessionStorage.getItem(
+        `https://backend-rust-eta.vercel.app/signup/findbyid?id=${sessionStorage.getItem(
           "empid"
         )}`
       )
