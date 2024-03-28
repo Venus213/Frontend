@@ -32,7 +32,7 @@ export const Blog = () => {
   const [getdata, setdata] = useState([]);
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/blog/view")
+      .get("http://localhost:3000/blog/view")
       .then((res) => {
         console.log(res);
         setdata(res.data.data);
@@ -82,7 +82,7 @@ export const Blog = () => {
                   const blogdate = moment(el.date).format("DD/MM/YYYY");
                   return (
                     <Blogcardprops
-                      image={"https://backend-rust-eta.vercel.app/images/" + el.image}
+                      image={"http://localhost:3000/images/" + el.image}
                       date={el.date}
                       title={el.title}
                       desc={el.desc}

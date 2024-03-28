@@ -30,7 +30,7 @@ export const Team = () => {
   const [getdata, setdata] = useState([]);
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/beautician/view")
+      .get("http://localhost:3000/beautician/view")
       .then((res) => {
         console.log(res);
         setdata(res.data.data);

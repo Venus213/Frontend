@@ -96,7 +96,7 @@ export const Feedback = () => {
                 formdata.append("profession", values.profession);
                 console.log(values);
                 axios
-                  .post("https://backend-rust-eta.vercel.app/feedback/create", formdata)
+                  .post("http://localhost:3000/feedback/create", formdata)
                   .then((res) => {
                     console.log(res);
                     notify(res.data.status);

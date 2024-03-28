@@ -64,7 +64,7 @@ export const Contact = () => {
                       // values.beautician = getbeautician;
                       // console.log(values);
                       axios
-                        .post("https://backend-rust-eta.vercel.app/contact/create", values)
+                        .post("http://localhost:3000/contact/create", values)
                         .then((res) => {
                           console.log(res);
                           resetForm()

@@ -29,7 +29,7 @@ export const Portfolio = () => {
   console.log(getfildata);
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/gallery/view")
+      .get("http://localhost:3000/gallery/view")
       .then((res) => {
         // console.log(res);
         setdata(res.data.data);

@@ -31,7 +31,7 @@ export const Offer = () => {
   // console.log(getdata);
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/offer/view")
+      .get("http://localhost:3000/offer/view")
       .then((res) => {
         // console.log(res);
         setdata(res.data.data);

@@ -50,7 +50,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/services/view")
+      .get("http://localhost:3000/services/view")
       .then((res) => {
         setdata(res.data.data);
       })
@@ -70,7 +70,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/beautician/view")
+      .get("http://localhost:3000/beautician/view")
       .then((res) => {
         // console.log(res);
         setdatateam(res.data.data);
@@ -91,7 +91,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/blog/view")
+      .get("http://localhost:3000/blog/view")
       .then((res) => {
         // console.log(res);
         setdatablog(res.data.data);

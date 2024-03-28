@@ -30,7 +30,7 @@ export const Service = () => {
   const [getdata, setdata] = useState([]);
   useEffect(() => {
     axios
-      .get("https://backend-rust-eta.vercel.app/services/view")
+      .get("http://localhost:3000/services/view")
       .then((res) => {
         setdata(res.data.data);
       })

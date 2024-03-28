@@ -44,7 +44,7 @@ export const Price = () => {
 
   useEffect(() => {
     axios
-      .get(`https://backend-rust-eta.vercel.app/price/nameshow/?name=${params.name}`)
+      .get(`hzz/price/nameshow/?name=${params.name}`)
       .then((res) => {
         setname(res.data.data);
       })
