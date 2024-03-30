@@ -31,7 +31,7 @@ export const Team = () => {
   const [getdata, setdata] = useState([]);
   useEffect(() => {
     axios
-      .get("${demo}beautician/view")
+      .get(`${demo}beautician/view`)
       .then((res) => {
         console.log(res);
         setdata(res.data.data);
