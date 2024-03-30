@@ -79,7 +79,7 @@ export const Team = () => {
                   {getdata.map((el, index) => {
                     return (
                       <Teamcardprops
-                        image={`${demo}/images/` + el.image}
+                        image={"http://localhost:3000/images/" + el.image}
                         title={el.title}
                         desc={el.desc}
                       />
