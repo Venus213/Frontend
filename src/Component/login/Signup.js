@@ -22,6 +22,7 @@ export const Signup = () => {
       transition: Bounce,
     });
   };
+  const demo = process.env.REACT_APP_DEMO
 
   return (
     <div
@@ -44,7 +45,7 @@ export const Signup = () => {
             }}
             onSubmit={async (values ,{resetForm}) => {
               axios
-                .post("http://localhost:3000/signup/signup", values)
+                .post(`${demo}signup/signup`, values)
                 .then((res) => {
                   console.log(res);
                   resetForm()
@@ -102,7 +103,7 @@ export const Signup = () => {
             }}
             onSubmit={async (values) => {
               axios
-                .post("http://localhost:3000/signup/login", values)
+                .post(`${demo}signup/login`, values)
                 .then((res) => {
                   // console.log();
                   sessionStorage.setItem("emptoken" , res.data.token )
