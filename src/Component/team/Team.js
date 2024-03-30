@@ -9,6 +9,7 @@ import { Footer } from "../footer/Footer";
 export const Team = () => {
   // start code for a error page
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const demo = process.env.REACT_APP_DEMO
 
   useEffect(() => {
     const handleOnlineStatusChange = () => {
@@ -30,7 +31,7 @@ export const Team = () => {
   const [getdata, setdata] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/beautician/view")
+      .get("${demo}beautician/view")
       .then((res) => {
         console.log(res);
         setdata(res.data.data);
@@ -78,7 +79,7 @@ export const Team = () => {
                   {getdata.map((el, index) => {
                     return (
                       <Teamcardprops
-                        image={"http://localhost:3000/images/" + el.image}
+                        image={`${demo}/images/` + el.image}
                         title={el.title}
                         desc={el.desc}
                       />
