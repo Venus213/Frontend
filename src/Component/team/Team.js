@@ -9,7 +9,7 @@ import { Footer } from "../footer/Footer";
 export const Team = () => {
   // start code for a error page
   const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const demo = process.env.REACT_APP_DEMO
+  
 
   useEffect(() => {
     const handleOnlineStatusChange = () => {
@@ -40,6 +40,8 @@ export const Team = () => {
         console.log(error);
       });
   });
+
+  const demo = process.env.REACT_APP_DEMO
 
   return (
     <div>
