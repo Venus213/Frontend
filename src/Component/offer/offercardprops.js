@@ -11,9 +11,9 @@ export const Offercardprops = (props) => {
         <img src={props.image} alt=""/>
         </div>
         <div className="card__content">
-          <p className="card__title"> {props.hed} </p>
+          <p className="card__title" style={{color:"#e5c0c8"}}> {props.hed} </p>
           <b>{props.price}</b>
-          <p className="card__description">
+          <p className="card__description" style={{color:"#e5c0c8"}}>
             {props.desc}
           </p>
         </div>

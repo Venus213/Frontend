@@ -157,6 +157,7 @@ a:focus {
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
+
 .navbar {
   position: relative;
   transition: 0.5s;
@@ -587,6 +588,10 @@ a:focus {
   background: #673046bb;
   border-color: #673046bb;
 }
+
+/* .pricees h3{
+  color: #e5c0c8;
+} */
 
 /*******************************/
 /*********** Team CSS **********/
@@ -1379,6 +1384,11 @@ a:focus {
 /*********** Offers CSS **********/
 /*******************************/
 
+
+.card__content{
+  color: #e5c0c8;
+}
+
 .offer-page .card {
   position: relative;
   /* width: 300px;
@@ -1413,7 +1423,7 @@ a:focus {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #e5c0c8;
+  background-color: #78475b;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);

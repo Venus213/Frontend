@@ -326,7 +326,9 @@ export const Index = () => {
                   </a>
                 </div>
                 <div className="box" style={{cursor:"pointer"}}>
-                  {getdatateam.map((el, index) => {
+                  {getdatateam
+                  .slice(Math.max(getdata.length - 3, 0))
+                  .map((el, index) => {
                     // console.log(el);
                     return (
                       <div className="team-card" key={index}>

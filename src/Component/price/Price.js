@@ -44,7 +44,7 @@ export const Price = () => {
 
   useEffect(() => {
     axios
-      .get(`hzz/price/nameshow/?name=${params.name}`)
+      .get(`http://localhost:3000/price/nameshow/?name=${params.name}`)
       .then((res) => {
         setname(res.data.data);
       })
@@ -87,11 +87,11 @@ export const Price = () => {
                       image={"http://localhost:3000/images/" + el.image}
                       title={el.title}
                       price={"₹ " +el.price +"/-"}
-                      // book={
-                      //   <li className="btns" onClick={() => history.push("/appointment")}>
-                      //     Book Appointment
-                      //   </li>
-                      // }
+                      book={
+                        <li className="btns" onClick={() => history.push("/appointment")}>
+                          Book Appointment
+                        </li>
+                      }
                     />
                   );
                 })}
