@@ -50,7 +50,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get(`${demo}services/view`)
+      .get("http://localhost:3000/services/view")
       .then((res) => {
         setdata(res.data.data);
       })
@@ -70,7 +70,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get(`${demo}beautician/view`)
+      .get("http://localhost:3000/beautician/view")
       .then((res) => {
         // console.log(res);
         setdatateam(res.data.data);
@@ -91,7 +91,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get(`${demo}blog/view`)
+      .get("http://localhost:3000/blog/view")
       .then((res) => {
         // console.log(res);
         setdatablog(res.data.data);
@@ -100,8 +100,6 @@ export const Index = () => {
         console.log(error);
       });
   }, [getdatablog]);
-
-  const demo = process.env.REACT_APP_DEMO
 
   return (
     <div>
@@ -202,7 +200,7 @@ export const Index = () => {
                         <div className="service-item">
                           <div className="service-img" style={{ height: 235 }}>
                             <img
-                              src={`${demo}images/` + el.image}
+                              src={"http://localhost:3000/images/" + el.image}
                               alt="Hair cut"
                             />
                           </div>
