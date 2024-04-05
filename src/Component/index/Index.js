@@ -91,7 +91,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/blog/view")
+      .get(`${demo}blog/view`)
       .then((res) => {
         // console.log(res);
         setdatablog(res.data.data);
@@ -200,7 +200,7 @@ export const Index = () => {
                         <div className="service-item">
                           <div className="service-img" style={{ height: 235 }}>
                             <img
-                              src={"http://localhost:3000/images/" + el.image}
+                              src={`${demo}images/` + el.image}
                               alt="Hair cut"
                             />
                           </div>

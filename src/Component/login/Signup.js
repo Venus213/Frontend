@@ -96,6 +96,7 @@ export const Signup = () => {
         </div>
 
         <div className="login1">
+          {/* <h1>hello</h1> */}
           <Formik
             initialValues={{
               email: "",
@@ -103,13 +104,17 @@ export const Signup = () => {
             }}
             onSubmit={async (values) => {
               axios
+              
                 .post(`${demo}signup/login`, values)
                 .then((res) => {
                   // console.log();
                   sessionStorage.setItem("emptoken" , res.data.token )
                   sessionStorage.setItem("empid" , res.data.data._id )
                   notify(res.data.status);
-                  history.push("/index")
+                  // history.push("/index")
+                  window.location.href = "https://admin-ebon-nine.vercel.app/";
+                  
+
                 })
                 .catch((error) => {
                   console.log(error);
