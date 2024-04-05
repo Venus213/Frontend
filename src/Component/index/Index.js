@@ -50,7 +50,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/services/view")
+      .get(`${demo}services/view`)
       .then((res) => {
         setdata(res.data.data);
       })
@@ -70,7 +70,7 @@ export const Index = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/beautician/view")
+      .get(`${demo}beautician/view`)
       .then((res) => {
         // console.log(res);
         setdatateam(res.data.data);
@@ -100,6 +100,8 @@ export const Index = () => {
         console.log(error);
       });
   }, [getdatablog]);
+
+  const demo = process.env.REACT_APP_DEMO
 
   return (
     <div>
