@@ -111,10 +111,10 @@ export const Signup = () => {
                   sessionStorage.setItem("emptoken" , res.data.token )
                   sessionStorage.setItem("empid" , res.data.data._id )
                   notify(res.data.status);
-                  // history.push("/index")
+                  history.push("/index")
 
                   //vercel url//
-                  window.location.href = "https://admin-ebon-nine.vercel.app/";
+                  // window.location.href = "https://admin-ebon-nine.vercel.app/";
                   
 
                 })
